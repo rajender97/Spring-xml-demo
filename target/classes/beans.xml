@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "MovieName" class = "com.stackroute.MovieName">
+        <property name="MovieName" value="Bahubali"/>
+        <property name="actorName" value="prabas">
+    </property>
+
+
+    </bean>
+
+    <bean id = "ActorName" class = "com.stackroute.ActorName">
+       <property name="ActorName" value="prabas"/>
+        <property name="Gender" value="Male"/>
+        <property name="Age" value="22"> </property>
+    </bean>
+
+</beans>
