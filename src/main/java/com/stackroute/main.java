@@ -1,37 +1,39 @@
 package com.stackroute;
+
+
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
 public class main {
 
-    public  static  void main(String[] args) {
+    public  static  void main(String args []) {
 
-        ApplicationContext movie1=new ClassPathXmlApplicationContext("beans.xml");
-        MovieName movieFirst= (MovieName) movie1.getBean("movie1");
+        ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
+        MovieName movieFirst= (MovieName) context.getBean("movie1");
+        MovieName moviesecond=(MovieName)context.getBean("movie1");
 
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        MovieName movie=(MovieName) applicationContext.getBean("movie2");
+        MovieName movie2=(MovieName)applicationContext.getBean("movie2");
 
-        ApplicationContext movie2 = new ClassPathXmlApplicationContext("beans.xml");
-        MovieName movie=(MovieName) movie1.getBean("movie2");
-
-       // ApplicationContext movie1Again = new ClassPathXmlApplicationContext("beans.xml");
-        ///MovieName movieagain= (MovieName)  movie1Again.getBean("movie1Again");
-
+        MovieName movieB=(MovieName) applicationContext.getBean("movieB");
 
 
         System.out.println(movieFirst.getActor());
+
         System.out.println(movie.getActor());
 
-        if(movieFirst == movie)
-        {
+        System.out.println(movie==movie2);
 
-            if(movieFirst.equals(movie))
-                System.out.println("Both Objects are equal. ");
-            else
-                System.out.println("Both Objects are not equal. ");
+        System.out.println(movieFirst==moviesecond);
+        System.out.println(movie==movie2);
 
-        }
-        else
-            System.out.println("Both Objects are not equal. ");
+        System.out.println(movieB.getActor());
+
+
     }
 }
+
 
