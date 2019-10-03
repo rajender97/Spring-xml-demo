@@ -2,6 +2,7 @@ package com.stackroute;
 
 public class ActorName {
 
+
     private String name;
     private  String gender;
     private  int age;
