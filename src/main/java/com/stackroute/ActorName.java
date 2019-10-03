@@ -2,7 +2,6 @@ package com.stackroute;
 
 public class ActorName {
 
-
     private String name;
     private  String gender;
     private  int age;
@@ -38,5 +37,11 @@ public class ActorName {
                 ", gender='" + gender + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public ActorName(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
     }
 }
