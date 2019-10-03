@@ -1,18 +1,20 @@
 package com.stackroute;
 
 public class MovieName {
-    private String MovieName;
-    private String actorName;
 
-    public void setMovieName(String MovieName) {
-     this.MovieName= MovieName;
+    ActorName actor;
+    public ActorName getActor() {
+        return actor;
     }
 
-    public void setActorName(String actorName) {
-        this.actorName = actorName;
+    public void setActor(ActorName actor) {
+        this.actor = actor;
     }
 
-    public void displayMovieInfo(){
-        System.out.println("Movie Name is : " +MovieName+" And the Actor Name is : "+actorName);
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "actor=" + actor +
+                '}';
     }
 }
