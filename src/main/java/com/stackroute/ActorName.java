@@ -1,38 +1,32 @@
 package com.stackroute;
 
-public class ActorName {
+public class ActorName{
 
     private String name;
     private  String gender;
     private  int age;
 
     public String getName() {
-
         return name;
     }
 
     public void setName(String name) {
-
         this.name = name;
     }
 
     public String getGender() {
-
         return gender;
     }
 
     public void setGender(String gender) {
-
         this.gender = gender;
     }
 
     public int getAge() {
-
         return age;
     }
 
     public void setAge(int age) {
-
         this.age = age;
     }
 
@@ -45,7 +39,7 @@ public class ActorName {
                 '}';
     }
 
-    public ActorName(String name, String gender, int age) {
+    public ActorName (String name, String gender, int age) {
         this.name = name;
         this.gender = gender;
         this.age = age;

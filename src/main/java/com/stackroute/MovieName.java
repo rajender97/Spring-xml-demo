@@ -8,14 +8,11 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
+public class MovieName   {
 
-    private ActorName actor;
-    private ApplicationContextAware applicationContextAware;
-    private  BeanFactoryAware beanFactoryAware;
-    private  BeanNameAware beanNameAware;
+    private  ActorName actor;
 
-    public Movie(ActorName actor) {
+    public MovieName(ActorName actor) {
         this.actor = actor;
     }
 
@@ -32,17 +29,5 @@ class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware 
         return "Movie{" +
                 "actor=" + actor +
                 '}';
-    }
-
-    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println(beanFactory);
-    }
-
-    public void setBeanName(String s) {
-        System.out.println(s);
-    }
-
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println(applicationContext);
     }
 }
