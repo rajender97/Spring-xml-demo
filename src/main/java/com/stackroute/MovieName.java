@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContextAware;
 
 public class MovieName   {
 
-    private  ActorName actor;
+    private ActorName actor;
 
     public MovieName(ActorName actor) {
         this.actor = actor;

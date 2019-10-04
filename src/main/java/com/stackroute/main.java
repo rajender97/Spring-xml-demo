@@ -10,8 +10,8 @@ public class main {
 
     public  static  void main(String[] args) {
 
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-        applicationContext.registerShutdownHook();
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        ((ClassPathXmlApplicationContext) applicationContext).registerShutdownHook();
         BeanLifeCycleDemo beanLifeCycleDemo=(BeanLifeCycleDemo) applicationContext.getBean("cycle");
     }
 }

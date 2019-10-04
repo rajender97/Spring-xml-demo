@@ -9,7 +9,7 @@ public class BeanLifeCycleDemo implements InitializingBean, DisposableBean {
 
 
 
-    public  static  void main(String[] args) {
+    public  static  void main(String gopal []) {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
